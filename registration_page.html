@@ -1,0 +1,76 @@
+<!doctype html>     
+<html lang="it">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS (CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="registration_page.css" rel="stylesheet">
+
+    <title>Registrati | Viaggi in moto</title>
+    
+    <!-- Video di background -->
+    <video class="video-background" autoplay loop muted>
+      <source src="video_home.mp4" type="video/mp4">
+      Il tuo browser non supporta il formato video.
+    </video>
+  </head>
+  <body>
+    
+    <!-- Sezione Contatti -->
+    <section id="contact">
+      <h2>Unisciti a noi in questa fantastica avventura!</h2>
+      <h2>Compila i campi, ti ricontatteremo entro qualche ora!</h2>
+      <form action="#" method="post">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="cognome">Cognome:</label>
+        <input type="text" id="cognome" name="cognome" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="email">Password:</label>
+        <input type="email" id="email" name="email" required>
+
+        <div class="inline-fields">
+          <div class="field">
+            <label for="sesso">Sesso:</label>
+            <select id="sesso" name="sesso" required>
+              <option value="maschio">Maschio</option>
+              <option value="femmina">Femmina</option>
+              <option value="altro">Altro</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="eta">Età:</label>
+            <input type="number" id="eta" name="eta" min="18" max="100" required>
+          </div>
+
+          <div class="field">
+            <label for="luogo">Luogo di Nascita:</label>
+            <input type="text" id="luogo" name="luogo" required>
+          </div>
+        </div>
+
+        <label for="message">Messaggio:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+      </form>
+
+      <!-- Tasto Home -->
+      <div class="home-btn">
+      <button type="submit">Registrati</button>
+       <a href="index.html">Torna alla Home</a>
+       </div>
+
+    </section>
+
+    <!-- Bootstrap JS (CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

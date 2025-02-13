@@ -1,0 +1,185 @@
+/* Stile generale per le immagini */
+section img {
+  width: 100%; /* Immagini responsive */
+  max-width: 400px; /* Larghezza massima per le immagini */
+  height: auto; /* Mantiene il rapporto di aspetto */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiunge una leggera ombra */
+  transition: transform 0.3s ease-in-out; /* Aggiungi la transizione per l'ingrandimento */
+}
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Assicura che il video copra tutto lo schermo */
+  z-index: -1; /* Posiziona il video dietro il contenuto */
+}
+
+/* Sezione con immagini a sinistra e descrizione a destra */
+.section-content {
+  display: flex;
+  align-items: center; /* Centra verticalmente il contenuto */
+  margin: 30px 0; /* Spaziatura tra le sezioni */
+}
+
+.section-content img {
+  margin-right: 20px; /* Distanza tra l'immagine e il testo */
+}
+
+/* Effetto hover per ingrandire l'immagine */
+section img:hover {
+  transform: scale(1.1); /* Ingrandisce l'immagine del 10% */
+}
+
+/* La descrizione a destra */
+.description {
+  max-width: 600px; /* Larghezza massima per il testo */
+}
+
+/* Modifica del testo per il layout */
+.description h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.description p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Aggiungi uno stile coerente per il modulo di contatto */
+section#contact {
+  background-color: rgba(0, 0, 0, 0.7); /* Sfondo trasparente */
+  color: white;
+  padding: 50px 30px;
+  border-radius: 10px;
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+/* Pulsante Home */
+.home-btn {
+  margin-top: 20px;
+  display: block;
+  width: 40%;
+  text-align: center;
+  margin-left: 270px;
+}
+
+.home-btn a {
+  background-color: #ff5100;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+
+.home-btn a:hover {
+  background-color: #8f9faf;
+  transform: translateY(-3px);
+}
+
+/* Modale personalizzata */
+.modal-content img {
+  width: 100%; /* L'immagine occupa tutta la larghezza della modale */
+}
+
+.modal-content .second-image {
+  margin-top: 20px;
+  width: 100%; /* Puoi settare una larghezza diversa per la seconda immagine */
+  display: block;
+  object-fit: cover;
+}
+.modal-content {
+  background-color: rgba(0, 0, 0, 0.7);  /* Background scuro e trasparente */
+  color: white; /* Colore del testo nel modal */
+  border-radius: 10px; /* Arrotonda gli angoli */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Ombra per il modal */
+  padding: 20px;
+}
+
+/* Modal Header */
+.modal-header {
+  background-color: rgba(0, 0, 0, 0.6); /* Leggero scuro per l'header */
+  color: white; /* Colore del titolo */
+}
+
+/* Modal Body */
+.modal-body {
+  background-color: transparent; /* Lascia trasparente per vedere il video */
+  color: white; /* Colore del testo */
+}
+
+/* Personalizza le immagini all'interno del modal */
+.modal-content img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Aggiungi un'ombra leggera intorno all'immagine */
+}
+
+.modal-content .second-image {
+  margin-top: 20px;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Media Queries per schermi molto piccoli (max-width: 480px) */
+@media (max-width: 480px) {
+  /* Sezione con immagini a sinistra e descrizione a destra */
+  .section-content {
+    flex-direction: column; /* Le immagini e il testo sono impilati verticalmente */
+    text-align: center; /* Centra il testo */
+  }
+
+  .section-content img {
+    margin-bottom: 10px; /* Riduce lo spazio tra immagine e descrizione */
+    max-width: 100%; /* Rende l'immagine più grande su schermi piccoli */
+  }
+
+  .description {
+    max-width: 100%; /* La descrizione occupa tutta la larghezza disponibile */
+  }
+
+  .description h3 {
+    font-size: 1.4rem; /* Riduce la dimensione del titolo */
+  }
+
+  .description p {
+    font-size: 0.9rem; /* Riduce la dimensione del testo per schermi piccoli */
+  }
+
+  /* Modulo di contatto */
+  section#contact {
+    padding: 20px;
+    max-width: 100%; /* Il modulo occupa tutta la larghezza */
+  }
+
+  /* Pulsante Home */
+   .home-btn {
+    width: 80%; /* Aumenta la larghezza del pulsante */
+    margin-left: auto;
+    margin-right: auto; /* Centra il pulsante */
+  }
+
+  .home-btn a {
+    font-size: 0.9rem; /* Riduce la dimensione del testo per il pulsante */
+  }
+
+  /* Modal */
+  .modal-content {
+    padding: 10px; /* Riduce il padding per ottimizzare lo spazio */
+  }
+
+  .modal-content img {
+    max-width: 100%;
+    height: auto;
+  }
+}

@@ -1,0 +1,137 @@
+/* Stile generale per le immagini */
+section img {
+  width: 100%; /* Immagini responsive */
+  max-width: 400px; /* Larghezza massima per le immagini */
+  height: auto; /* Mantiene il rapporto di aspetto */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiunge una leggera ombra */
+  transition: transform 0.3s ease-in-out; /* Aggiungi la transizione per l'ingrandimento */
+}
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Assicura che il video copra tutto lo schermo */
+  z-index: -1; /* Posiziona il video dietro il contenuto */
+}
+
+/* Sezione con immagini a sinistra e descrizione a destra */
+.section-content {
+  display: flex;
+  align-items: center; /* Centra verticalmente il contenuto */
+  margin: 30px 0; /* Spaziatura tra le sezioni */
+}
+
+.section-content img {
+  margin-right: 20px; /* Distanza tra l'immagine e il testo */
+}
+
+/* La descrizione a destra */
+.description {
+  max-width: 600px; /* Larghezza massima per il testo */
+}
+
+/* Modifica del testo per il layout */
+.description h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.description p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Effetto hover per ingrandire l'immagine */
+section img:hover {
+  transform: scale(1.1); /* Ingrandisce l'immagine del 10% */
+}
+
+/* Aggiungi uno stile coerente per il modulo di contatto */
+section#contact {
+  background-color: rgba(0, 0, 0, 0.7); /* Sfondo trasparente */
+  color: white;
+  padding: 50px 30px;
+  border-radius: 10px;
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+/* Pulsante Home */
+.home-btn {
+  margin-top: 20px;
+  display: block;
+  width: 40%;
+  text-align: center;
+  margin-left: 270px;
+}
+
+.home-btn a {
+  background-color: #ff5100;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+
+.home-btn a:hover {
+  background-color: #8f9faf;
+  transform: translateY(-3px);
+}
+
+/* Media Queries per schermi piccoli (smartphone, max-width: 480px) */
+@media (max-width: 480px) {
+  /* Sezione con immagini a sinistra e descrizione a destra */
+  .section-content {
+    flex-direction: column; /* Le immagini e il testo sono impilati verticalmente */
+    text-align: center; /* Centra il testo */
+  }
+
+  .section-content img {
+    margin-right: 0; /* Rimuove la distanza tra immagine e testo */
+    margin-bottom: 20px; /* Aggiunge spazio sotto l'immagine */
+    max-width: 100%; /* Le immagini occupano tutta la larghezza possibile */
+  }
+
+  /* La descrizione */
+  .description {
+    max-width: 100%; /* La descrizione ora occupa tutta la larghezza disponibile */
+  }
+
+  .description h3 {
+    font-size: 1.5rem; /* Riduce la dimensione del titolo */
+  }
+
+  .description p {
+    font-size: 0.9rem; /* Riduce la dimensione del testo */
+  }
+
+  /* Modulo di contatto */
+  section#contact {
+    padding: 30px 15px; /* Riduce il padding per risparmiare spazio */
+    margin: 20px; /* Riduce il margine */
+  }
+
+  /* Pulsante Home */
+  .home-btn {
+    width: 80%; /* Aumenta la larghezza del pulsante */
+    margin-left: auto;
+    margin-right: auto; /* Centra il pulsante */
+  }
+
+  .home-btn a {
+    font-size: 0.9rem; /* Riduce la dimensione del testo per il pulsante */
+  }
+
+  /* Video background (assicurarsi che non copra il contenuto) */
+  .video-background {
+    object-fit: cover; /* Mantiene il video visibile senza coprire il contenuto */
+  }
+}

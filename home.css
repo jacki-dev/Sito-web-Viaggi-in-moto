@@ -1,0 +1,232 @@
+  /* CSS per fare in modo che il video sia a sfondo pieno */
+  .video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Assicura che il video copra tutto lo schermo */
+    z-index: -1; /* Posiziona il video dietro il contenuto */
+  }
+
+  /* Contenitore con flexbox per centrare il contenuto */
+  .content {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra il contenuto */
+    text-align: center;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.7); /* Box scuro per contrastare con il video */
+    border-radius: 10px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Ombra per migliorare la leggibilità del testo */
+    max-width: 80%; /* Limita la larghezza del box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Aggiunge una leggera ombra per profondità */
+  }
+
+  .content h1 {
+    font-size: 2.5rem; /* Titolo grande per maggiore impatto */
+    margin-bottom: 20px;
+  }
+
+  .content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+
+  /* Pulsante principale (btn-primary) */
+  .btn-primary {
+    background-color: #ff7b00;
+    border-color: #000000;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s; /* Transizione per il hover */
+  }
+
+  .btn-primary:hover {
+    background-color: #ffd900;
+    border-color: #000000;
+    transform: translateY(-2px); /* Leggero spostamento verso l'alto durante hover */
+  }
+
+  .btn-primary:active {
+    background-color: #d15e00 !important;
+    border-color: #000000 !important;
+    transform: translateY(2px); /* Spostamento verso il basso durante il clic */
+  }
+
+  /* Dropdown menu */
+  .dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.8); /* Sfondo scuro per il menu a tendina */
+    border: none; /* Rimuove il bordo predefinito */
+    border-radius: 5px; /* Bordi arrotondati per il menu */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Leggera ombra per dare profondità */
+  }
+
+  .dropdown-item {
+    color: white; /* Colore del testo del menu */
+    font-size: 1.1rem; /* Dimensione del testo del menu */
+  }
+
+  .dropdown-item:hover {
+    background-color: #ffd900; /* Colore di sfondo quando si passa sopra l'elemento */
+    color: black; /* Colore del testo quando si passa sopra l'elemento */
+  }
+
+  .dropdown-item:active {
+    background-color: #d15e00; /* Colore di sfondo quando l'elemento è cliccato */
+  }
+
+  /* Stili per la sezione dei partner */
+  .sponsor {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Sfondo scuro per contrastare */
+    margin-top: 650px; /* Aggiungi margine per spostare gli sponsor più in basso */
+    border-radius: 10px;
+    max-width: 50%;
+    margin-left: 25%;
+  }
+
+  .sponsor h1 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .sponsor p{
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 20px;
+  }
+
+  .sponsor img {
+    max-width: 150px;
+    margin: 15px;
+    transition: transform 0.3s; /* Aggiunge transizione */
+  }
+
+  .sponsor img:hover {
+    transform: scale(1.1); /* Effetto hover per ingrandire l'immagine */
+  }
+ /* CSS per fare in modo che il video sia a sfondo pieno */
+ .video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Assicura che il video copra tutto lo schermo */
+  z-index: -1; /* Posiziona il video dietro il contenuto */
+}
+
+/* Aggiungi uno stile coerente per il modulo di contatto */
+section#contact {
+  background-color: rgba(0, 0, 0, 0.7); /* Sfondo trasparente */
+  color: white;
+  padding: 50px 30px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 50px auto;
+}
+
+section#contact h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+section#contact label {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  display: block;
+}
+
+section#contact input, section#contact textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background-color: #f8f9fa;
+}
+
+section#contact button {
+  background-color: #ff5100;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* Transizione per l'effetto hover */
+}
+
+section#contact button:hover {
+  background-color: #8f9faf;
+  transform: translateY(-3px); /* Leggero spostamento verso l'alto */
+}
+
+/* Carosello */
+.carousel {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 30%; /* La larghezza delle immagini si adatta al contenitore */
+    max-width: 200px; /* Limitiamo la larghezza per ogni immagine */
+    height: auto;
+    margin: 0 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 24px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Media Queries per dispositivi molto piccoli (max-width: 480px) */
+@media (max-width: 480px) {
+  /* Le immagini nel carosello occupano una porzione maggiore dello schermo */
+  .carousel-images img {
+    width: 80%; /* Le immagini sono più larghe */
+    margin: 0 5px; /* Riduce ulteriormente il margine tra le immagini */
+  }
+
+  /* Rendere i pulsanti ancora più piccoli su schermi ultra-piccoli */
+  .carousel-btn {
+    font-size: 18px;
+    padding: 6px;
+  }
+}

@@ -1,0 +1,185 @@
+/* CSS per fare in modo che il video sia a sfondo pieno */
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Assicura che il video copra tutto lo schermo */
+  z-index: -1; /* Posiziona il video dietro il contenuto */
+}
+
+/* Aggiungi uno stile coerente per il modulo di contatto */
+section#contact {
+  background-color: rgba(0, 0, 0, 0.7); /* Sfondo trasparente */
+  color: white;
+  padding: 30px; /* Ridotto per fare più compatto */
+  border-radius: 10px;
+  max-width: 800px; /* Limita la larghezza del modulo */
+  margin: 50px auto;
+}
+
+/* Rende il modulo più compatto */
+form label {
+  font-size: 0.9rem; /* Rimpicciolisce il font delle etichette */
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Stile per i campi di input e selezione */
+form input, form select, form textarea {
+  width: 100%;
+  padding: 6px; /* Ridotto padding */
+  margin-bottom: 12px; /* Distanza tra i campi */
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem; /* Rimpicciolisce anche il font dei campi */
+}
+
+/* Allineamento e riduzione della larghezza per i campi Sesso, Età, Luogo di nascita */
+.inline-fields {
+  display: flex;
+  gap: 15px; /* Spazio tra i campi */
+  justify-content: space-between; /* Distanza tra i campi */
+}
+
+.field {
+  flex: 1; /* Ogni campo occupa la stessa larghezza */
+}
+
+textarea {
+  font-size: 0.9rem; /* Testo leggermente più piccolo per il messaggio */
+  padding: 10px; /* Aggiunge un po' di padding nel testo */
+  resize: vertical; /* Permette di ridimensionare solo verticalmente */
+}
+
+/* Pulsante di invio */
+button {
+  background-color: #ff5100;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  width: 18%;
+  text-align: center;
+}
+
+button:hover {
+  background-color: #8f9faf;
+  transform: translateY(-3px); /* Leggero spostamento verso l'alto */
+}
+
+/* Pulsante Home */
+.home-btn {
+  margin-top: 20px;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.home-btn a {
+  background-color: #ff5100;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+.home-btn a:hover {
+  background-color: #8f9faf;
+  transform: translateY(-3px);
+}
+
+/* Media Queries per dispositivi mobili */
+@media (max-width: 768px) {
+  /* Modifica la larghezza del modulo di contatto per dispositivi mobili */
+  section#contact {
+    padding: 20px; /* Ridotto padding */
+    max-width: 90%; /* Larghezza massima 90% */
+  }
+
+  /* Modifica dei campi di input */
+  form input, form select, form textarea {
+    font-size: 0.8rem; /* Riduce leggermente il font */
+    padding: 8px; /* Più padding per migliorare la leggibilità */
+  }
+
+  /* Disposizione dei campi inline per dispositivi mobili */
+  .inline-fields {
+    flex-direction: column; /* Allinea verticalmente i campi */
+    gap: 10px; /* Riduce lo spazio tra i campi */
+  }
+
+  /* Pulsante invio per dispositivi mobili */
+  button {
+      width: 80%; /* Aumenta la larghezza del pulsante */
+      margin-left: auto;
+      margin-right: auto; /* Centra il pulsante */
+    }
+  
+  }
+
+  /* Pulsante Home per dispositivi mobili */
+  .home-btn a {
+    font-size: 1.2rem; /* Aumenta la dimensione del pulsante */
+  }
+
+  /* Media Queries per schermi molto piccoli (es. smartphone) */
+  @media (max-width: 480px) {
+    /* Modifica le dimensioni dei font */
+    form label {
+      font-size: 0.8rem;
+    }
+
+    form input, form select, form textarea {
+      font-size: 0.8rem; /* Riduce ulteriormente il font */
+    }
+
+    /* Modifica le dimensioni dei pulsanti */
+    button {
+      width: 90%; /* Pulsante più largo per smartphone */
+      font-size: 1.1rem; /* Aumenta leggermente il font */
+      margin-bottom: 15px; /* Aggiunge spazio sotto il pulsante */
+    }
+
+    /* Modifica la dimensione del testo del pulsante Home */
+    .home-btn {
+      width: 90%; /* Aumenta la larghezza del pulsante */
+      margin-left: auto;
+      margin-right: auto; /* Centra il pulsante */
+    }
+
+    .home-btn a {
+      font-size: 1rem; /* Riduce la dimensione del testo per il pulsante */
+    }
+  }
+
+  /* Media Queries per schermi molto larghi (desktop) */
+  @media (min-width: 1200px) {
+    /* Modifica la larghezza del modulo di contatto per schermi grandi */
+    section#contact {
+      padding: 40px;
+      max-width: 1000px; /* Aumenta la larghezza massima del modulo */
+    }
+
+    /* Campo di input per desktop */
+    form input, form select, form textarea {
+      font-size: 1rem; /* Rende il font più grande */
+    }
+
+    /* Aumenta la dimensione dei pulsanti su desktop */
+    button {
+      width: 15%; /* Riduce la larghezza del pulsante su schermi grandi */
+      font-size: 1.2rem; /* Aumenta il font */
+    }
+
+    /* Pulsante Home su desktop */
+    .home-btn a {
+      font-size: 1.2rem; /* Aumenta il font per il pulsante su schermi grandi */
+    }
+  }
+  
