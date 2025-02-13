@@ -220,13 +220,71 @@ section#contact button:hover {
 @media (max-width: 480px) {
   /* Le immagini nel carosello occupano una porzione maggiore dello schermo */
   .carousel-images img {
-    width: 80%; /* Le immagini sono più larghe */
-    margin: 0 5px; /* Riduce ulteriormente il margine tra le immagini */
+    width: 90%; /* Le immagini sono più larghe */
+    margin: 0 5px; /* Riduce il margine tra le immagini */
   }
 
-  /* Rendere i pulsanti ancora più piccoli su schermi ultra-piccoli */
+  /* Ridurre il numero di immagini visibili nel carosello per schermi piccoli */
+  .carousel {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+    height: 250px; /* Limita l'altezza per una migliore visualizzazione su schermi piccoli */
+  }
+
+  /* Aumenta la dimensione dei pulsanti per una navigazione più facile */
   .carousel-btn {
-    font-size: 18px;
+    font-size: 30px; /* Aumenta la dimensione dei pulsanti */
+    padding: 15px;
+    width: 40px;  /* Rende i pulsanti più grandi per il touch */
+    height: 40px;
+  }
+
+  /* Spazio per il contenuto del carosello (contenitore) */
+  .carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    justify-content: center; /* Centra le immagini */
+  }
+  
+  /* Per migliorare la leggibilità dei testi nel carosello su schermi piccoli */
+  .content h1 {
+    font-size: 1.8rem; /* Rende il titolo leggibile su schermi piccoli */
+    margin-bottom: 10px; /* Riduce il margine sotto il titolo */
+  }
+
+  .content p {
+    font-size: 1rem; /* Riduce la dimensione del testo per una lettura più comoda */
+    margin-bottom: 10px; /* Spaziatura ridotta per il testo */
+  }
+
+  /* Adatta il contenitore del contenuto (div content) */
+  .content {
+    position: absolute;
+    top: 15%; /* Riduce la distanza dal top */
+    left: 50%;
+    transform: translateX(-50%); /* Mantiene il contenuto centrato */
+    text-align: center;
+    padding: 15px; /* Riduce il padding */
+    background-color: rgba(0, 0, 0, 0.7); /* Box scuro per contrastare con il video */
+    border-radius: 10px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Ombra per migliorare la leggibilità del testo */
+    max-width: 85%; /* Limita la larghezza del box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Aggiunge una leggera ombra per profondità */
+  }
+
+  /* Adatta i pulsanti */
+  .btn-primary {
+    font-size: 1rem; /* Riduce la dimensione del testo del pulsante */
+    padding: 10px 20px; /* Riduce il padding */
+  }
+
+  /* Rendere i pulsanti più piccoli su schermi molto piccoli */
+  .carousel-btn {
+    font-size: 18px; /* Riduce la dimensione del pulsante su schermi più piccoli */
     padding: 6px;
   }
 }
